@@ -1,0 +1,8 @@
+language: generic
+
+deploy:
+  provider: s3
+  bucket: "xn--80a0abxb.xn--80aaatyni4c.xn--p1ai"
+  skip_cleanup: true
+  local_dir: website
+  endpoint: "https://storage.yandexcloud.net"
