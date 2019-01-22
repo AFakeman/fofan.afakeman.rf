@@ -32,7 +32,7 @@ const splitArticle = (markdown) => {
 let posts = [];
 
 const markdownFiles = fs.readdirSync(postsDir).filter(
-    (filename) => filename.endsWith('.md')).sort().reverse();
+    (filename) => filename.endsWith('.md')).sort();
 
 const markdownPlugins = markdownFiles.map((filename) => {
   const filePath = postsDir + filename;
