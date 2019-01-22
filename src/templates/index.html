@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/<%= require("../main.css") %>" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="horizontal-center">
+        <%= require('html-loader!./header.html') %>
+        <% _.each(posts, function (post) { %>
+          <div class="post-container">
+            <h2><a href="/<%= post.uri %>"><%= post.title %></a></h2><br>
+            <span class="subtitle"><%= post.subtitle %></span>
+            <div class="post-preview">
+              <%= post.htmlContentPreCut %>
+              <% if (post.cut) { %>
+                <a href="/<%= post.uri %>"><small>Читать далее </small></a>
+              <% } %>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </body>
+</html>

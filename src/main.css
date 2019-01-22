@@ -1,0 +1,44 @@
+body {
+    background-color: #fdf6e3;
+    color: #444;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+div.post-preview {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+div.post-container {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.horizontal-center {
+    width: 80%;
+    max-width: 800px;
+}
+
+div.post-container h2 {
+    display: inline;
+}
+
+span.subtitle {
+    font-size: 12px;
+    margin-top: 3px;
+}

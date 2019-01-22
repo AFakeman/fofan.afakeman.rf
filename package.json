@@ -1,0 +1,25 @@
+{
+  "name": "afakeman-website",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "serve dist",
+    "build": "webpack"
+  },
+  "author": "AFakeman",
+  "license": "ISC",
+  "dependencies": {
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "marked": "^0.6.0",
+    "serve": "^10.1.1",
+    "webpack": "^4.29.0",
+    "webpack-html-plugin": "^0.1.1"
+  },
+  "devDependencies": {
+    "file-loader": "^3.0.1",
+    "webpack-cli": "^3.2.1"
+  }
+}
