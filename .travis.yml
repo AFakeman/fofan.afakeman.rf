@@ -12,7 +12,7 @@ script:
 
 deploy:
   provider: s3
-  bucket: "xn--80a0abxb.xn--80aaatyni4c.xn--p1ai"
+  bucket: "xn--90aexm.xn--80aaatyni4c.xn--p1ai"
   skip_cleanup: true
   local_dir: dist
-  endpoint: "https://storage.yandexcloud.net"
+  region: eu-central-1
