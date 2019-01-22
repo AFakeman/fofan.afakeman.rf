@@ -3,9 +3,9 @@ const fs = require('fs');
 const marked = require('marked');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const templatesDir = path.resolve(__dirname, 'src') + '/templates';
-const postsDir = path.resolve(__dirname, 'src') + '/posts';
-const htmlDir = path.resolve(__dirname, 'src') + '/html';
+const templatesDir = path.resolve(__dirname, 'src') + '/templates/';
+const postsDir = path.resolve(__dirname, 'src') + '/posts/';
+const htmlDir = path.resolve(__dirname, 'src') + '/html/';
 
 const postsUrl = 'post/';
 
@@ -16,7 +16,7 @@ const splitArticle = (markdown) => {
   const titleSplitIndex = markdown.indexOf('\n');
   const title = markdown.substr(0, titleSplitIndex);
   const subtitleSplitIndex = markdown.indexOf('\n', titleSplitIndex + 1);
-  const subtitle = markdown.substr(titleSplitIndex, 
+  const subtitle = markdown.substr(titleSplitIndex,
       subtitleSplitIndex - titleSplitIndex);
   const body = markdown.substr(subtitleSplitIndex, markdown.length);
   const htmlContent = marked(body);
@@ -35,7 +35,7 @@ const markdownFiles = fs.readdirSync(postsDir).filter(
     (filename) => filename.endsWith('.md')).sort().reverse();
 
 const markdownPlugins = markdownFiles.map((filename) => {
-  const filePath = postsDir + `/${filename}`;
+  const filePath = postsDir + filename;
   const fileContents = fs.readFileSync(filePath, 'UTF-8');
   const outputLink = postUrlForFilename(filename);
   const {
@@ -59,7 +59,7 @@ const markdownPlugins = markdownFiles.map((filename) => {
   return new HtmlWebpackPlugin({
     filename: outputLink,
     inject: false,
-    template: templatesDir + '/markdown.html',
+    template: templatesDir + 'markdown.html',
     templateParameters: {
       title,
       subtitle,
@@ -73,14 +73,14 @@ const htmlFiles = fs.readdirSync(htmlDir)
 const htmlPlugins = htmlFiles.map((filename) => new HtmlWebpackPlugin({
   filename: filename,
   inject: false,
-  template: filename,
+  template: htmlDir + filename,
 }));
 
 
 const indexPlugin = new HtmlWebpackPlugin({
     filename: 'index.html',
     inject: false,
-    template: templatesDir + '/index.html',
+    template: templatesDir + 'index.html',
     templateParameters: {
       title: 'AFakeman\'s blog',
       posts,
