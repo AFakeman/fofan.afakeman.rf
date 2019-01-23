@@ -12,8 +12,8 @@
         <% _.each(posts, function (post) { %>
           <div class="post-container">
             <h2><a href="/<%= post.uri %>"><%= post.title %></a></h2><br>
-            <span class="subtitle"><%= post.subtitle %></span>
-            <div class="post-preview">
+            <span class="date"><%= post.date %></span>
+            <div class="post-body">
               <%= post.htmlContentPreCut %>
               <% if (post.cut) { %>
                 <a href="/<%= post.uri %>"><small>Читать далее </small></a>

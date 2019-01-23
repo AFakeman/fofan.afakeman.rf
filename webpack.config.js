@@ -15,15 +15,15 @@ const postUrlForFilename = (filename) => postsUrl +
 const splitArticle = (markdown) => {
   const titleSplitIndex = markdown.indexOf('\n');
   const title = markdown.substr(0, titleSplitIndex);
-  const subtitleSplitIndex = markdown.indexOf('\n', titleSplitIndex + 1);
-  const subtitle = markdown.substr(titleSplitIndex,
-      subtitleSplitIndex - titleSplitIndex);
-  const body = markdown.substr(subtitleSplitIndex, markdown.length);
+  const dateSplitIndex = markdown.indexOf('\n', titleSplitIndex + 1);
+  const date = markdown.substr(titleSplitIndex,
+      dateSplitIndex - titleSplitIndex);
+  const body = markdown.substr(dateSplitIndex, markdown.length);
   const htmlContent = marked(body);
   const cutIndex = htmlContent.indexOf('<cut>');
   return {
     title,
-    subtitle,
+    date,
     htmlContent,
     cutIndex,
   };
@@ -40,7 +40,7 @@ const markdownPlugins = markdownFiles.map((filename) => {
   const outputLink = postUrlForFilename(filename);
   const {
     title,
-    subtitle,
+    date,
     htmlContent,
     cutIndex,
   } = splitArticle(fileContents);
@@ -50,7 +50,7 @@ const markdownPlugins = markdownFiles.map((filename) => {
 
   posts.push({
     title,
-    subtitle,
+    date,
     htmlContentPreCut,
     uri: outputLink,
     cut: cutIndex !== -1,
@@ -62,7 +62,7 @@ const markdownPlugins = markdownFiles.map((filename) => {
     template: templatesDir + 'markdown.html',
     templateParameters: {
       title,
-      subtitle,
+      date,
       htmlContent,
     },
   });
