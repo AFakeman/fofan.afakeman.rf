@@ -1,18 +1,14 @@
 language: node_js
 node_js:
-  - node
-
+- node
 cache: npm
-
 install:
-  - npm install
-
+- npm install
 script:
-  - npm run build
-
+- npm run build
 deploy:
-  provider: s3
-  bucket: "xn--90aexm.xn--80aaatyni4c.xn--p1ai"
+  provider: firebase
   skip_cleanup: true
-  local_dir: dist
-  region: eu-central-1
+  token:
+    secure: bb5q1XZ5+3i0vJ/HsjnozBNQIPT1T7FPGn7tY1/pDP41FyLOJcgddD2W2ZNbIMyGa/1tgau+kGXPlI6IibJ4jTHhW5FEETYxpt7h4v/ld1fwRkA0RBFo6nrSMTz3SuE2i/+E/ZgIQScMUGWSTlqpn6Y0jnr4y0QvypLb+nFiYso/iqQcQlPERGZt3U4xsF19s4k8x3xy0xr+cJGxBFHeUNmsqNV81NBYtcquqP9icSEZzyNck2j/KYnnsAI9payUbtaRITGwkjHeEP4KBIddg024beUed4ibls0/87LdJCa1LavD9K20VBBThSlqBpI1J/zR1O/a2BeEppqJFl0m33587xwNiwVqW7JhsYK/OCtTpvqe68Ulknl+cakDxJYlTyxIeerYagh61PQeOH6Jx6eiwYoRmvHZgJ55O2vfoMmCG8mvvsdDL7Jee6OcbswW/GMM3AaiF5CrRdhekxSfE5Y/LRcJJEYYej+b0gowPurW8iasCjrKe2VSwE7bXeg3KinVktg3fOTKnsH3AG7Ml8rjvDxl3FkqCx7izzkmUpjKsBujBGRvXlIBM/wDYeLWN75XgWDiYYp/GVzdMvgFbvYWzsA7u9Zq6au3rkTlKeAx32u9k9xAGFrLTShQgPLdIrgvLr/5L9BhEK+u1iwgy4ADDajdIvzdgKmvBweeoHw=
+  project: "afakeman-blog"
