@@ -1,3 +1,6 @@
+---
+---
+
 body {
     background-color: #fdf6e3;
     color: #444;
@@ -18,12 +21,16 @@ div.post-body {
     margin-right: 5%;
 }
 
+li.post {
+    list-style: none;
+}
+
 div.post-container {
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-div.main-container {
+main.main-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -38,7 +45,12 @@ div.post-container h2 {
     display: inline;
 }
 
+ul.post-list {
+    padding-inline-start: 0;
+}
+
 span.date {
     font-size: 12px;
-    margin-top: 3px;
+    font-weight: normal;
+    margin-top: -13px;
 }

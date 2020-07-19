@@ -1,2 +1,6 @@
 /node_modules
 /dist
+_site
+.sass-cache
+.jekyll-metadata
+vendor
