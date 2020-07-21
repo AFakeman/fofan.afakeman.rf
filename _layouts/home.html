@@ -10,15 +10,13 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <ul class="post-list">
       {%- for post in site.posts -%}
-      <li class="post">
+      <article>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <h2>
+        <h2 class="post-title">
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
-          </a><br>
-          <span class="date">{{ post.date | date: date_format }}</span>
+          </a>
         </h2>
         <div class="post-body">
           {%- if site.show_excerpts -%}
@@ -26,9 +24,8 @@ layout: default
             <a class="post-link" href="{{ post.url | relative_url }}"><small>Читать далее </small></a>
           {%- endif -%}
         </div>
-      </li>
+      </article>
       {%- endfor -%}
-    </ul>
   {%- endif -%}
 
 </div>

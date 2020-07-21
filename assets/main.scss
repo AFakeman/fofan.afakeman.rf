@@ -6,6 +6,25 @@ body {
     color: #444;
 }
 
+main {
+    margin: auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+h1.header-title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.67em;
+    margin-bottom: 0em;
+    width: 80%;
+    max-width: 800px;
+}
+
+h2.post-title {
+    margin-bottom: 0;
+}
+
 a {
     color: #555;
     text-decoration: none;
@@ -21,36 +40,13 @@ div.post-body {
     margin-right: 5%;
 }
 
-li.post {
-    list-style: none;
-}
-
-div.post-container {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-main.main-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-div.horizontal-center {
-    width: 80%;
-    max-width: 800px;
-}
-
-div.post-container h2 {
-    display: inline;
-}
-
-ul.post-list {
-    padding-inline-start: 0;
-}
-
 span.date {
     font-size: 12px;
     font-weight: normal;
-    margin-top: -13px;
+    display: block;
+}
+
+.post-meta {
+    margin-top: 0;
+    margin-bottom: 0;
 }
