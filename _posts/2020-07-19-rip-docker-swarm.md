@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Вот и помер Docker Swarm"
-date: 2020-07-19
+date: 2020-07-21
+loc_date: 21 июля 2020
 excerpt_separator: <!--more-->
 ---
 # Введение
