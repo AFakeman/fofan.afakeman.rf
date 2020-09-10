@@ -12,6 +12,13 @@ main {
     max-width: 800px;
 }
 
+footer.site-footer {
+    margin: auto;
+    margin-top: 2em;
+    width: 80%;
+    max-width: 800px;
+}
+
 h1.header-title {
     margin-left: auto;
     margin-right: auto;
@@ -41,6 +48,12 @@ div.post-body {
 }
 
 span.date {
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+}
+
+span.footer-text {
     font-size: 12px;
     font-weight: normal;
     display: block;
