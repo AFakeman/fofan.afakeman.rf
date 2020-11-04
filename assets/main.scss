@@ -69,3 +69,13 @@ span.footer-text {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+div.highlighter-rouge {
+    overflow-x: scroll;
+    width: 100%;
+    border-style: solid;
+    border-color:#444;
+    border-width: 0.2em;
+    padding: 0.5em;
+    border-radius: 0.2em;
+}
