@@ -9,7 +9,8 @@ layout: default
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="date">{{ page.date | date: date_format }}</span>
+        {%- assign default_date = page.date | date: date_format -%}
+        <span class="date">{{ page.loc_date | default: default_date }}</span>
       </time>
     </p>
   </header>
