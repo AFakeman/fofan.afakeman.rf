@@ -17,7 +17,7 @@ title: AFakeman's blag
 email: hostmaster@афакеман.рф
 description: >-
   Личный блог AFakeman.
-baseurl: ""
+baseurl: "/blog"
 url: ""
 github_username: afakeman
 lang: ru
