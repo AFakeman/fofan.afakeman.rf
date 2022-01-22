@@ -2,7 +2,8 @@
 <html lang="ru">
 
   <head>
-    <title>AAAAAA</title>
+    <meta charset="utf-8">
+    <title>{{ .Title }}{{ if not .IsHome }} | {{ .Site.Title }}{{ end }}</title>
     <link rel="stylesheet" href="/assets/main.css">
   </head>
 
