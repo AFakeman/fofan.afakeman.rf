@@ -1,9 +1,9 @@
 ---
-layout: post
-title: "Вот и помер Docker Swarm"
-date: 2020-07-21
-loc_date: 21 июля 2020
+date: "2020-07-19T00:00:00Z"
+draft: true
 excerpt_separator: <!--more-->
+loc_date: 21 июля 2020
+title: Вот и помер Docker Swarm
 ---
 # Введение
 Да, можно сказать, что он еще не умер, его разработка не заморожена, и в

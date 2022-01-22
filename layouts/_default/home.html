@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ range .Site.RegularPages }}
+<article>
+  <h2 class="post-title">
+    <a class="title" href="{{ .Permalink }}">
+      {{ .Title }}
+    </a>
+  </h2>
+  <span class="date">
+    {{ default .Date .Params.loc_date }}
+  </span>
+  <div class="post-body">
+    {{ .Summary }}
+    <a class="post-link" href="{{ .Permalink }}"><small>Читать далее </small></a>
+  </div>
+</article>
+{{ end }}
+{{ end }}

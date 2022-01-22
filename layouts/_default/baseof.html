@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <title>AAAAAA</title>
+    <link rel="stylesheet" href="/assets/main.css">
+  </head>
+
+  <body>
+    <header class="site-header">
+      <h1 class="header-title">
+        <a class="title" href="/">AFakeman's bl</a><a class="title" href='https://xkcd.com/148/'>a</a><a class="title" href="/">g</a>
+      </h1>
+    </header>
+    <main class="main-container">
+      {{ block "main" . }}
+      {{ end }}
+    </main>
+    <footer class="site-footer">
+      <hr>
+      <span class="footer-text">
+        {{ block "footer" . }}
+          Мнения, звучащие в этом блоге, не отражают мнение моего текущего работодателя,
+          моих бывших работодателей, бывших, текущих, и будущих друзей, родных, и меня
+          самого.
+        {{ end }}
+      </span>
+    </footer>
+  </body>
+
+</html>
+
