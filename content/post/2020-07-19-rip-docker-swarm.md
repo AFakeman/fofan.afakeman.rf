@@ -3,6 +3,7 @@ date: "2020-07-19T00:00:00Z"
 excerpt_separator: <!--more-->
 loc_date: 21 июля 2020
 title: Вот и помер Docker Swarm
+slug: rip-docker-swarm
 ---
 # Введение
 Да, можно сказать, что он еще не умер, его разработка не заморожена, и в

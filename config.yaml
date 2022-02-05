@@ -2,3 +2,6 @@ baseURL: ""
 disablePathToLower: true
 languageCode: en-us
 title: AFakeman's blag
+uglyurls: true
+permalinks:
+  post: /:year/:month/:day/:slug/

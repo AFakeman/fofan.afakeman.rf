@@ -2,6 +2,7 @@
 date: "2020-12-20T00:00:00Z"
 excerpt_separator: <!--more-->
 loc_date: 20 декабря 2020
+slug: docker-intro
 title: 'На пути к Kubernetes: от контейнеров к оркестрации. Основы Docker. Создаем
   контейнеры.'
 ---
