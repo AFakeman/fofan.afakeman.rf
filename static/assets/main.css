@@ -67,7 +67,9 @@ span.footer-text {
     margin-bottom: 0;
 }
 
-div.highlighter-rouge {
+pre {
+    margin-top: 3em;
+    margin-bottom: 3em;
     overflow-x: scroll;
     width: 100%;
     border-style: solid;
@@ -75,8 +77,4 @@ div.highlighter-rouge {
     border-width: 0.2em;
     padding: 0.5em;
     border-radius: 0.2em;
-}
-
-pre {
-    margin: 3em;
 }
